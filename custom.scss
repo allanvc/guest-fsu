@@ -1,0 +1,157 @@
+/*-- scss:defaults --*/
+
+$font-family-sans-serif: "Lato", sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+$presentation-heading-font: "Yanone Kaffeesatz", sans-serif;
+$presentation-font-size-root: 28px;
+$body-color: #4C5455;
+$link-color: #76DFEC;
+$presentation-heading-color: #4C5455;
+$presentation-h1-font-size: 2.5rem;
+$presentation-h2-font-size: 1.9rem;
+$presentation-h3-font-size: 1.4rem;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400;700&family=Source+Code+Pro:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+/* ── Logo: bottom-left ── */
+.reveal .slide-logo {
+  left: 10px !important;
+  right: auto !important;
+  bottom: 10px !important;
+  top: auto !important;
+  height: 45px !important;
+  max-height: 45px !important;
+}
+
+/* ── Inverse slides ── */
+.reveal .slides section.inverse {
+  background-color: #4C5455;
+}
+.reveal .slides section.inverse h1,
+.reveal .slides section.inverse h2,
+.reveal .slides section.inverse h3,
+.reveal .slides section.inverse h4,
+.reveal .slides section.inverse p,
+.reveal .slides section.inverse li,
+.reveal .slides section.inverse a,
+.reveal .slides section.inverse code {
+  color: white !important;
+}
+
+/* ── Title slide ── */
+.reveal #title-slide .title {
+  font-size: 2.1em;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.reveal #title-slide .subtitle {
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 0.4em;
+}
+.reveal #title-slide .author {
+  font-size: 0.95em;
+  color: #888;
+  margin-top: 0.8em;
+}
+.reveal #title-slide .date {
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+/* ── Headings ── */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+/* ── Inline code color (orange, like middlebury) ── */
+.reveal code:not(pre > code) {
+  color: #F8A53A;
+  background: rgba(248, 165, 58, 0.08);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* ── highlight-last-item: dim past fragments ── */
+.reveal .slides section .incremental > *.fragment.visible:not(.current-fragment) {
+  opacity: 0.5;
+  transition: opacity 0.25s ease;
+}
+.reveal .slides section .incremental > *.fragment.current-fragment {
+  opacity: 1;
+}
+
+/* ── Vertical + horizontal centering for .center slides ── */
+.reveal .slides section.center {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.reveal .slides section.center h2 {
+  text-align: center;
+  width: 100%;
+}
+
+/* ── iframes: no border ── */
+.reveal iframe {
+  border: none;
+}
+
+/* ── Columns ── */
+.reveal .columns {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* ── General slide padding ── */
+.reveal .slides section {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* ── Figure captions ── */
+.reveal figcaption {
+  font-size: 0.7em;
+  color: #888;
+  font-style: italic;
+}
+
+/* ── Progress bar color ── */
+.reveal .progress span {
+  background: #F8A53A;
+}
+
+/* ── Slide number ── */
+.reveal .slide-number {
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.55em;
+  color: #aaa;
+  background: transparent;
+}
+
+/* ── Text-only slides: bigger font ── */
+.reveal .slides section.text-slide {
+  font-size: 1.45em;
+  line-height: 1.7;
+}
+.reveal .slides section.text-slide h2 {
+  margin-bottom: 0.6em;
+}
+.reveal .slides section.text-slide ul,
+.reveal .slides section.text-slide ol {
+  margin-left: 1.2em;
+}
