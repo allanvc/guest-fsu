@@ -1,2 +1,2 @@
-# lecture-fsu
+# guest-fsu
 guest lecture at fsu
